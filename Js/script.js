@@ -18,35 +18,36 @@ console.table(numeros);
 
 
 // Acceder a un valor en el arreglo
-
 console.log(numeros[1]); 
 console.log(numeros[2]); 
 console.log(numeros[0]);
 
-// Saber el largo del array
 
+// Saber el largo del array
 console.log(meses.length);
 
-// Recorrer el largo del arreglo
 
+// Recorrer el largo del arreglo
 for(let i=0;i < meses.length;i++){
     console.log(meses[i]);
 }
 
-// Agregar o modificar un elemento de un arreglo
 
+// Agregar o modificar un elemento de un arreglo
 meses[0] = 'abril'; // ===> con esto modificamos el indice 0 del arreglo original
 meses[4] = 'mayo'; // ===> con esto agregamos un nuevo mes al final del array
 
 console.table(meses);
 
-// Agregar elementos al final del array
 
+
+// Agregar elementos al final del array
 meses.push('junio');
 meses.push('julio');
 
-// DESTRUCTURING DE ARRAYS
 
+
+// DESTRUCTURING DE ARRAYS
 const numeros2 = [10,20,30,40,50,60]; 
 
 const [, ,primero, ,segundo] = numeros2;
@@ -56,8 +57,10 @@ console.log(segundo);
 
 
 
-// PROYECTO CARRITO
 
+
+
+// PROYECTO CARRITO
 const carrito = [];
 
 const producto ={
@@ -113,7 +116,7 @@ console.log(existe);
 
 // para saber el monto total del carrito uso:
 let resultado2 = carrito2.reduce((total,producto) => total + producto.precio,0);
-console.log();
+console.log(resultado2);
 
 
 // para saber que productos cumplen con ciertos requisitos use:
@@ -136,7 +139,7 @@ console.log(resultado5);
 // para juntar 2 o mas carritos use:
 const carrito3 =[
     {nombre:'televisor',precio:60000},
-    {nombre:'teclado',precio:5000},
+    {nombre:'iphone',precio:50000},
     {nombre:'luz led',precio:7000}
 ];
 
