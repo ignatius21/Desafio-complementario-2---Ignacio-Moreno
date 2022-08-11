@@ -1,147 +1,117 @@
-// DESAFIO ARRAYS
+// VARIABLES
 
-const arreglo = [10,20,30];
-console.log(arreglo);
+const carrito = document.querySelector('#carrito');
+const contenedorCarrito = document.querySelector('#lista-carrito tbody');
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito')
+const listaProductos = document.querySelector('#lista-productos');
+let productosCarrito =[];
 
-// ARRAY con "new":
-const meses = new Array("enero","febrero","marzo");
-console.log(meses);
+cargarEventListener();
 
+function cargarEventListener(){
+    //agregar el producto con el boton haciendo click
+    listaProductos.addEventListener('click',agregarProducto);
 
-// ARRAY con multiple elementos:
-const varios = [10,"hola",true,[10,20,30]];
-console.log(varios);
+    //eliminando productos del carrito
+    carrito.addEventListener('click',eliminarProducto);
 
-const numeros = [10,20,30,40];
-console.log(numeros);
-console.table(numeros); 
+    // vaciar carrito completamente
+    vaciarCarritoBtn.addEventListener('click',()=>{
+        productosCarrito = []; // reseteo el carrito
+        limpiarHTML(); // elimino todo el HTML
+    })
 
-
-// Acceder a un valor en el arreglo
-console.log(numeros[1]); 
-console.log(numeros[2]); 
-console.log(numeros[0]);
-
-
-// Saber el largo del array
-console.log(meses.length);
-
-
-// Recorrer el largo del arreglo
-for(let i=0;i < meses.length;i++){
-    console.log(meses[i]);
 }
 
 
-// Agregar o modificar un elemento de un arreglo
-meses[0] = 'abril'; // ===> con esto modificamos el indice 0 del arreglo original
-meses[4] = 'mayo'; // ===> con esto agregamos un nuevo mes al final del array
+// FUNCIONES
 
-console.table(meses);
+function agregarProducto(e){
+    e.preventDefault(); // lo que hace es prevenir la accion por default,que seria llevarnos al inicio de la pagina
+    if(e.target.classList.contains('agregar-carrito')){ 
+        const productoSeleccionado = e.target.parentElement.parentElement;
 
+        leerProducto(productoSeleccionado);
+    }  
+};
 
+// ELIMINANDO PRODUCTO DEL CARRITO
 
-// Agregar elementos al final del array
-meses.push('junio');
-meses.push('julio');
+function eliminarProducto(e){
+    if(e.target.classList.contains('borrar-producto')){
+        const productoId = e.target.getAttribute('data-id');
 
-
-
-// DESTRUCTURING DE ARRAYS
-const numeros2 = [10,20,30,40,50,60]; 
-
-const [, ,primero, ,segundo] = numeros2;
-
-console.log(primero);
-console.log(segundo);
-
-
-
-
-
-
-// PROYECTO CARRITO
-const carrito = [];
-
-const producto ={
-    nombre: 'monitor',
-    precio: 30000
+        //elimino por id del producto
+        productosCarrito = productosCarrito.filter(producto => producto.id !== productoId);
+        carritoHTML();
+    }
 }
 
-const producto2={
-    nombre: 'tablet',
-    precio: 40000
+
+
+// LEER EL CONTENIDO DEL HTML Y EXTRAER LA INFORMACION DEL PRODUCTO
+
+function leerProducto(producto){
+
+    //creo un objeto del producto
+    const infoProducto = {
+        imagen: producto.querySelector('img').src, // obtenemos la ruta de la imagen
+        titulo: producto.querySelector('h4').textContent, // sacamos el texto del elemento con textContent
+        precio: producto.querySelector('.precio span').textContent, //sacamos el texto del elemento
+        id: producto.querySelector('a').getAttribute('data-id'), // para saber el id del producto
+        cantidad: 1 
+    }
+
+    // revisando si el producto ya esta en el carrito
+    const existe = productosCarrito.some(producto => producto.id === infoProducto.id);
+
+    if(existe){
+        const productos = productosCarrito.map(producto =>{
+            if(producto.id === infoProducto.id){
+                producto.cantidad ++;
+                return producto; // retorna el producto actualizado
+            }else{
+                return producto; // retorna los objetos que no son duplicados
+            }
+        });
+        productosCarrito = [...productos];
+
+    }else{
+        productosCarrito =[...productosCarrito,infoProducto];
+    }
+
+    //agregando los elementos al carrito
+    
+    carritoHTML();
+};
+
+// MOSTRANDO EL CARRITO EN EL HTML
+
+function carritoHTML(){
+    //limpiar HTML
+    limpiarHTML();
+
+    // Recorro el carrito y genero el HTML
+    productosCarrito.forEach(producto =>{
+        const {imagen, titulo, precio, cantidad, id} = producto;
+       const row =  document.createElement('tr');
+       row.innerHTML = `
+        <td><img src = "${imagen}" width="100"></td>
+        <td>${titulo}</td>
+        <td>${precio}</td>
+        <td>${cantidad}</td>
+        <td> <a href="#" class= "borrar-producto" data-id="${id}"> X <a></td>
+       `;
+
+       // agrego el HTML del carrito al tbody
+       contenedorCarrito.appendChild(row);
+    })
 }
 
-carrito.push(producto);
-carrito.push(producto2);
-carrito.unshift(producto2); // ===> con esto enviamos el objeto producto2 al inicio de la tabla
+// ELIMINANDO LOS PRODUCTOS YA CARGADOS AL HTML
 
-console.table(carrito);
-
-let resultado;
-resultado = [...carrito,producto]; // ===> esto depende del orden en que declaramos los elementos, es como se van a mostrar en en arreglo final de la tabla...
-
-console.table(resultado);
-
-// Eliminar elementos del array con SPLICE()
-
-carrito.splice(1,1); // ===> elimina desde el indice 1 hasta el indice 1 tambien en este caso.
-console.table(carrito);
-
-
-
-// Metodo .forEach()
-const carrito2 = [
-    {nombre:"monitor",precio:1000},
-    {nombre:"teclado",precio:500},
-    {nombre:"mouse",precio:100},
-    {nombre:"parlante",precio:700},
-]
-
-carrito2.forEach(producto =>console.log(`El ${producto.nombre} cuesta ${producto.precio}`));
-
-
-// Metodo .map()
-carrito2.map(producto =>console.log(`El ${producto.nombre} cuesta ${producto.precio}`));
-
-// La sintaxis es la misma que .forEach(),simplemente que .map() crea un nuevo array,lo cual no lo hace .forEach()
-
-
-
-// para saber si un producto esta dentro del carrito uso:
-const existe = carrito2.some(producto =>producto.nombre === 'teclado');
-console.log(existe);
-
-
-// para saber el monto total del carrito uso:
-let resultado2 = carrito2.reduce((total,producto) => total + producto.precio,0);
-console.log(resultado2);
-
-
-// para saber que productos cumplen con ciertos requisitos use:
-let resultado3;
-resultado3 = carrito2.filter(producto =>producto.precio > 300);
-console.log(resultado3);
-
-
-// para saber las especificaciones de un producto dentro del carrito uso:
-const resultado4 = carrito2.find(producto=>producto.nombre ==='monitor');
-console.log(resultado4);
-
-
-// para saber si todos los productos cumplen con una especificacion uso:
-const resultado5 = carrito2.every(producto => producto.precio < 50);
-console.log(resultado5);
-
-
-
-// para juntar 2 o mas carritos use:
-const carrito3 =[
-    {nombre:'televisor',precio:60000},
-    {nombre:'iphone',precio:50000},
-    {nombre:'luz led',precio:7000}
-];
-
-const carritoTotal = carrito2.concat(carrito3);
-console.log(carritoTotal);
+function limpiarHTML(){
+    while(contenedorCarrito.firstChild){
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
+}
