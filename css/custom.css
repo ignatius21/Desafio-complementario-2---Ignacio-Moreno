@@ -50,7 +50,7 @@ ul {
     display: none;
 }
 .submenu:hover #carrito{
-    display: block;
+    display:block;
     position: absolute;
     right: 5;
     z-index: 1;

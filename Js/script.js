@@ -19,7 +19,12 @@ function cargarEventListener(){
     vaciarCarritoBtn.addEventListener('click',()=>{
         productosCarrito = []; // reseteo el carrito
         limpiarHTML(); // elimino todo el HTML
-    })
+    });
+    // Mostrando los productos desde localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+        productosCarrito = JSON.parse( localStorage.getItem('carrito') ) || []; // sie el usuario no agrega nada,le muestra un arreglo vacio
+        carritoHTML(); // imprimimos lo que tenemos en el localStorage en el HTML
+   });
 
 }
 
@@ -105,7 +110,13 @@ function carritoHTML(){
 
        // agrego el HTML del carrito al tbody
        contenedorCarrito.appendChild(row);
-    })
+    });
+    // Agregar el carrito al storage
+    sincronizarStorage();
+}
+// AGREGANDO AL LOCALSTORAGE CON JSON
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(productosCarrito));
 }
 
 // ELIMINANDO LOS PRODUCTOS YA CARGADOS AL HTML
