@@ -6,6 +6,7 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito')
 const listaProductos = document.querySelector('#lista-productos');
 let productosCarrito =[];
 
+
 cargarEventListener();
 
 function cargarEventListener(){
@@ -22,7 +23,7 @@ function cargarEventListener(){
     });
     // Mostrando los productos desde localStorage
     document.addEventListener('DOMContentLoaded', () => {
-        productosCarrito = JSON.parse( localStorage.getItem('carrito') ) || []; // sie el usuario no agrega nada,le muestra un arreglo vacio
+        productosCarrito = JSON.parse( localStorage.getItem('carrito') ) || []; // si el usuario no agrega nada,le muestra un arreglo vacio
         carritoHTML(); // imprimimos lo que tenemos en el localStorage en el HTML
    });
 
@@ -113,11 +114,14 @@ function carritoHTML(){
     });
     // Agregar el carrito al storage
     sincronizarStorage();
+    
 }
+
 // AGREGANDO AL LOCALSTORAGE CON JSON
 function sincronizarStorage() {
     localStorage.setItem('carrito', JSON.stringify(productosCarrito));
 }
+
 
 // ELIMINANDO LOS PRODUCTOS YA CARGADOS AL HTML
 
