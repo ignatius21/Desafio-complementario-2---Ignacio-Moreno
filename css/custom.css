@@ -44,15 +44,18 @@ ul {
 }
 
 .submenu {
-    position: relative;
+    position:absolute;
+    display:block;
 }
 
 .submenu #carrito{
     display: none;
+    height: 50rem;
+    overflow-y:scroll;
 }
 .submenu:hover #carrito{
-    display:block;
-    position: absolute;
+    display:inline-block;
+    position: relative;
     right: 5;
     z-index: 1;
     background-color: white;
