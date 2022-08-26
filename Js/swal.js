@@ -124,10 +124,12 @@ btn12.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
         icon: 'success',
+        color: '#6926a7',
         title: 'Producto Agregado',
         showConfirmButton: false,
-        timer: 1000
+        timer: 1000,
       });
+      
 });
 
 // MENSAJE DE ELIMINACION DE CARRITO
@@ -142,5 +144,7 @@ btnEliminar.addEventListener('click',()=>{
         timer: 1200       
       });
 });
+
+
 
 
