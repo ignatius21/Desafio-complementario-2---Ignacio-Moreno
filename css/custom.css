@@ -241,6 +241,7 @@ opacity:0.8;
   
 .footer-dark .item.text {
 margin-bottom:36px;
+font-size: 2rem;
 }
   
 @media (max-width:767px) {
