@@ -47,6 +47,27 @@ ul {
     position:absolute;
     display:block;
 }
+.contenidoTexto{
+    width: 100%;
+    margin-top: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenidoTexto h1{
+    text-transform: uppercase;
+    font-size: 11rem;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+}
+.contenidoTexto span{
+    text-transform: uppercase;
+    font-size: 11rem;
+    color: #ffffff;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+}
 
 .submenu #carrito{
     display: none;

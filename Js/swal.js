@@ -163,7 +163,7 @@ btnEliminar.addEventListener('click',()=>{
         position: 'center',
         background:'#252525',
         color: '#ffffff',
-        icon: 'success',
+        icon: 'error',
         title: 'Carrito Eliminado',
         showConfirmButton: false,
         timer: 1200      
