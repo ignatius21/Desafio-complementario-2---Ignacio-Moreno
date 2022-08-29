@@ -29,12 +29,11 @@ header {
     }
 }
 .borrar-producto {
-    background-color: rgb(117, 10, 10);
-    border-radius: 50%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+}
+.borrar-producto:hover {
+    cursor: pointer;
 }
 
 ul {

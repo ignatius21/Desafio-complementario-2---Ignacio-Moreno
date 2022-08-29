@@ -131,7 +131,7 @@ function carritoHTML(){
         <td>${titulo}</td>
         <td>${precio}</td>
         <td>${cantidad}</td>
-        <td> <a href="#" class= "borrar-producto" data-id="${id}"> X <a></td>
+        <td> <img src="img/trash.png" class= "borrar-producto" data-id="${id}"><img></td>
        `;
 
        // agrego el HTML del carrito al tbody
