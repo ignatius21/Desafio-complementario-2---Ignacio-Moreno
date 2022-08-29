@@ -2,6 +2,7 @@ const btn = document.getElementById(1);
 btn.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -15,6 +16,7 @@ const btn2 = document.getElementById(2);
 btn2.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -28,6 +30,7 @@ const btn3 = document.getElementById(3);
 btn3.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -41,6 +44,7 @@ const btn4 = document.getElementById(4);
 btn4.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -54,6 +58,7 @@ const btn5 = document.getElementById(5);
 btn5.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -67,6 +72,7 @@ const btn6 = document.getElementById(6);
 btn6.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -80,6 +86,7 @@ const btn7 = document.getElementById(7);
 btn7.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -93,6 +100,7 @@ const btn8 = document.getElementById(8);
 btn8.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -106,6 +114,7 @@ const btn9 = document.getElementById(9);
 btn9.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -119,6 +128,7 @@ const btn10 = document.getElementById(10);
 btn10.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -132,6 +142,7 @@ const btn11 = document.getElementById(11);
 btn11.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -145,6 +156,7 @@ const btn12 = document.getElementById(12);
 btn12.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
+        allowOutsideClick: false,
         background:'#252525',
         color: '#ffffff',
         icon: 'success',
@@ -162,6 +174,7 @@ btnEliminar.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
         background:'#252525',
+        allowOutsideClick: false,
         color: '#ffffff',
         icon: 'error',
         title: 'Carrito Eliminado',

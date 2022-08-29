@@ -49,6 +49,9 @@ function eliminarProducto(e){
         Swal.fire({
             title: 'Desea Eliminar el Producto?',
             icon: 'warning',
+            color: '#ffffff',
+            allowOutsideClick: false,
+            background:'#252525',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -57,6 +60,7 @@ function eliminarProducto(e){
             if (result.isConfirmed) {
                 Swal.fire({
                     position: 'center',
+                    allowOutsideClick: false,
                     background:'#252525',
                     color: '#ffffff',
                     icon: 'error',
