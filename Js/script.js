@@ -46,11 +46,30 @@ function agregarProducto(e){
 
 function eliminarProducto(e){
     if(e.target.classList.contains('borrar-producto')){
-        const productoId = e.target.getAttribute('data-id');
-
-        //elimino por id del producto
-        productosCarrito = productosCarrito.filter(producto => producto.id !== productoId);
-        carritoHTML();
+        Swal.fire({
+            title: 'Desea Eliminar el Producto?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si,eliminar!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    position: 'center',
+                    background:'#252525',
+                    color: '#ffffff',
+                    icon: 'error',
+                    title: 'Producto Eliminado',
+                    showConfirmButton: false,
+                    timer: 800      
+                  });
+              const productoId = e.target.getAttribute('data-id');
+            //elimino por id del producto
+            productosCarrito = productosCarrito.filter(producto => producto.id !== productoId);
+            carritoHTML();
+            }
+          })    
     }
     sincronizarStorage();
 }
