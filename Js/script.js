@@ -155,3 +155,30 @@ function limpiarHTML(){
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     }
 }
+
+// FETCH API
+
+document.addEventListener('DOMContentLoaded',obtenerDatos) // CUANDO ESTA LISTO EL DOCUMENTO EJECUTA DE MANERA AUTOMATICA EL FETCH
+
+function obtenerDatos(){
+    const url = 'Js/data/productos.json';
+
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado => mostrarHTML(resultado))
+};
+
+
+function mostrarHTML(productos){
+    const contenido = document.querySelector('.row2');
+    let html = '';
+    productos.forEach(producto => {
+        const {imagen} = producto;
+
+        html += `<img src= ${imagen}></img>"`;
+    });
+    contenido.innerHTML = html;
+};
+
+
+

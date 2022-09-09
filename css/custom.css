@@ -48,6 +48,14 @@ ul {
     background-position: center;
 }
 
+#hero2 {
+    background-image:url(../img/accesorios.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .submenu {
     position:absolute;
     display:block;
@@ -68,6 +76,21 @@ ul {
     background: linear-gradient(0deg, rgb(54, 7, 63) 0%, rgb(4, 37, 68) 48%, rgb(74, 25, 131) 100%);
     -webkit-background-clip: text;
     color: transparent;
+}
+.contenidoTexto2{
+    width: 100%;
+    margin-top: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenidoTexto2 h1{
+    text-transform: uppercase;
+    font-size: 13.3rem;
+    font-family: Mintage;
+    font-weight: bolder;
+    font-style: oblique;
+    color: #faf9de;
 }
 
 
@@ -232,6 +255,13 @@ ul {
 }
 .agregar-carrito:hover{
     background-color: #6c2fa5 !important;
+}
+
+.row2 img{
+    width: 50rem;
+    height: 50rem;
+    padding: 3rem;
+    margin-left: 5rem;
 }
 
 /* FOOTER*/
