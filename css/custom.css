@@ -1,6 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: linear-gradient(180deg, rgb(255, 254, 243) 0%, rgb(255, 255, 255) 100%);
 }
+
 header {
     display: flex;
     padding: 20px;
@@ -48,14 +53,6 @@ ul {
     background-position: center;
 }
 
-#hero2 {
-    background-image:url(../img/accesorios.jpg);
-    height: 70vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .submenu {
     position:absolute;
     display:block;
@@ -77,22 +74,6 @@ ul {
     -webkit-background-clip: text;
     color: transparent;
 }
-.contenidoTexto2{
-    width: 100%;
-    margin-top: 29rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contenidoTexto2 h1{
-    text-transform: uppercase;
-    font-size: 13.3rem;
-    font-family: Mintage;
-    font-weight: bolder;
-    font-style: oblique;
-    color: #faf9de;
-}
-
 
 .submenu #carrito{
     display: none;
@@ -257,12 +238,73 @@ ul {
     background-color: #6c2fa5 !important;
 }
 
-.row2 img{
-    width: 50rem;
-    height: 50rem;
-    padding: 3rem;
-    margin-left: 5rem;
+
+
+
+
+
+
+/* ESTILOS SECCION ACCESORIOS*/
+
+.proximamente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+
+.row2 img{
+    width: 30rem;
+    height: 30rem;
+}
+.contenidoTexto2{
+    width: 100%;
+    margin-top: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoTexto2 h1{
+    text-transform: uppercase;
+    font-size: 13.3rem;
+    font-family: Mintage;
+    font-weight: bolder;
+    font-style: oblique;
+    color: #2d0350;
+}
+
+#hero2 {
+    background-image:url(../img/accesorios.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#encabezado2{
+    display: flex;
+    margin: 3rem;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 5.7rem;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: bolder;
+    color: #1a1a1a;
+}
+
+.columns{
+    display: flex;
+    margin: 1rem;
+}
+
+
+
+
+
+
+
 
 /* FOOTER*/
 

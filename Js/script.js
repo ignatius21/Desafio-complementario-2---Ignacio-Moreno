@@ -173,9 +173,20 @@ function mostrarHTML(productos){
     const contenido = document.querySelector('.row2');
     let html = '';
     productos.forEach(producto => {
-        const {imagen} = producto;
+        const {imagen,nombre,id} = producto;
 
-        html += `<img src= ${imagen}></img>"`;
+        html += `
+        <div class="four columns">
+                <div class="card">
+                    <img src="${imagen}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>${nombre}</h4>
+                        <p class="precio">$5700 <span class="u-pull-right ">$3750</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="${id}" id="${id}">Agregar al carrito</a>
+                    </div>
+                </div>
+        </div>
+        `;
     });
     contenido.innerHTML = html;
 };
