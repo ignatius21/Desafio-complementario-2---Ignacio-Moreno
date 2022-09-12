@@ -17,9 +17,49 @@ header {
     height: 50px;
     margin-top: 3rem;
 }
+#logo2{
+    height: 50px;
+    margin-top: 3rem;
+    padding-left: 2rem;
+}
+
+#hero {
+    background-image:url(../img/grafico.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contenidoTexto{
+    width: 100%;
+    margin-top: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenidoTexto h1{
+    text-transform: uppercase;
+    font-size: 13.3rem;
+    font-family: Mintage;
+    font-weight: bolder;
+    font-style: oblique;
+    background: linear-gradient(0deg, rgb(54, 7, 63) 0%, rgb(4, 37, 68) 48%, rgb(74, 25, 131) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+/* SECCION CARRITO DE COMPRAS*/
+
+.submenu {
+    position:absolute;
+    display:block;
+}
 #img-carrito{
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 9rem;
     display: flex;
     margin-left: 80rem;
     padding-top: 20px;
@@ -44,37 +84,6 @@ header {
 ul {
     list-style: none;
 }
-
-#hero {
-    background-image:url(../img/grafico1.jpg);
-    height: 70vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.submenu {
-    position:absolute;
-    display:block;
-}
-.contenidoTexto{
-    width: 100%;
-    margin-top: 29rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contenidoTexto h1{
-    text-transform: uppercase;
-    font-size: 13.3rem;
-    font-family: Mintage;
-    font-weight: bolder;
-    font-style: oblique;
-    background: linear-gradient(0deg, rgb(54, 7, 63) 0%, rgb(4, 37, 68) 48%, rgb(74, 25, 131) 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
 .submenu #carrito{
     display: none;
     height: 50rem;
@@ -140,8 +149,8 @@ ul {
     padding: .7rem;
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 15rem;
-    background-size: 13rem;
+    padding-left: 8rem;
+    background-size: 8rem;
     text-align: center;
 }
 @media (min-width: 750px) {
@@ -276,11 +285,11 @@ ul {
 }
 
 #hero2 {
-    background-image:url(../img/accesorios.jpg);
+    background-image:url(../img/grafico2.jpg);
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }
 
 #encabezado2{
