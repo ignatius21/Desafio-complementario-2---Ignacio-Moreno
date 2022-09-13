@@ -2,49 +2,49 @@
     {
          "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_React_M2_1024x1024.jpg?v=1614316057",
          "nombre" : "React Js",
-         "id" : "13"
+         "id" : 13
     },
       
     {
         "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_Js_M2_Lat_1024x1024.jpg?v=1614315761",
         "nombre" : "JavaScript",
-        "id" : "14"
+        "id" : 14
    },
       
    {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/Angular_M2_28de1391-b1d7-49e7-b2c0-dd60291a80c1_1024x1024.jpg?v=1614315276",
     "nombre" : "Angular Js",
-    "id" : "15"
+    "id" : 15
     },
     {
         "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_Github_M2_Lat_1024x1024.jpg?v=1614315564",
         "nombre" : "GitHub",
-        "id" : "16"
+        "id" : 16
    },
    {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_Node_M2_Lat_1024x1024.jpg?v=1614315928",
     "nombre" : "Node Js",
-    "id" : "17"
+    "id" : 17
     },
     {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BC_Vuejs_M2_003dc686-8578-4d91-9745-ec7a4994e243_1024x1024.jpg?v=1614314446",
     "nombre" : "Vue Js",
-    "id" : "18"
+    "id" : 18
     },
     {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/Css_M2_Lat_1024x1024.jpg?v=1614315421",
     "nombre" : "CSS",
-    "id" : "19"
+    "id" : 19
     },
     {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_Html2_M2_Lat_1024x1024.jpg?v=1614315649",
     "nombre" : "HTML",
-    "id" : "20"
+    "id" : 20
     },
     {
     "imagen" : "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/BZ_Wordpress2_1024x1024.jpg?v=1614316127",
     "nombre" : "Wordpress",
-    "id" : "21"
+    "id" : 21
     }
    
 ]

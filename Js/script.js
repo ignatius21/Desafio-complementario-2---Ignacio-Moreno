@@ -48,7 +48,7 @@ function eliminarProducto(e){
     if(e.target.classList.contains('borrar-producto')){
         Swal.fire({
             title: 'Desea Eliminar el Producto?',
-            icon: 'warning',
+            icon: 'question',
             color: '#ffffff',
             allowOutsideClick: false,
             background:'#252525',

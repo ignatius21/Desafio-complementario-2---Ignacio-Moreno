@@ -1,5 +1,5 @@
-const btn = document.getElementById(1);
-btn.addEventListener('click',()=>{
+const btn1 = document.getElementById(1);
+btn1.addEventListener('click',()=>{
     Swal.fire({
         position: 'center',
         allowOutsideClick: false,
@@ -191,22 +191,6 @@ btn12.addEventListener('click',()=>{
       
 });
 
-const btn13 = document.getElementById(13);
-btn13.addEventListener('click',()=>{
-    Swal.fire({
-        position: 'center',
-        allowOutsideClick: false,
-        background:'#252525',
-        imageUrl: './img/aprobacion.png',
-        imageAlt: 'aprobacion',
-        color: '#ffffff',
-        icon: 'success',
-        title: 'Producto Agregado',
-        showConfirmButton: false,
-        timer: 1000,
-      });
-      
-});
 
 // MENSAJE DE ELIMINACION DE CARRITO
 const btnEliminar = document.getElementById('vaciar-carrito');
