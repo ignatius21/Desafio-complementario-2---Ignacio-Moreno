@@ -192,6 +192,7 @@ btn12.addEventListener('click',()=>{
 });
 
 
+
 // MENSAJE DE ELIMINACION DE CARRITO
 const btnEliminar = document.getElementById('vaciar-carrito');
 

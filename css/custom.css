@@ -40,13 +40,18 @@ header {
 }
 .contenidoTexto h1{
     text-transform: uppercase;
-    font-size: 13.3rem;
-    font-family: Mintage;
+    font-size: 10rem;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
     font-weight: bolder;
     font-style: oblique;
-    background: linear-gradient(0deg, rgb(54, 7, 63) 0%, rgb(4, 37, 68) 48%, rgb(74, 25, 131) 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #b765e7;
+}
+
+.typed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #98f3e4;
 }
 
 
@@ -155,6 +160,12 @@ ul {
     background-image: url(../img/envio.png);
 }
 
+.texto-icono{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 2.2rem !important;
+    font-weight: bold;
+}
+
 #encabezado{
     display: flex;
     padding: 2rem;
@@ -167,7 +178,7 @@ ul {
 }
 
 #lista-productos .row {
-    margin-bottom:20px;
+    margin-bottom:2rem;
 }
 
 
