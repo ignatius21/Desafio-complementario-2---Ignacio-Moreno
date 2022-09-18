@@ -76,7 +76,7 @@ window.sr =ScrollReveal();
     sr.reveal('.animacionBuzo',{
         duration: 1500,
         origin: 'right',
-        distance: '400px',
+        distance: '200px',
         reset: false,
         delay: 200
 });
