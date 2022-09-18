@@ -185,6 +185,7 @@ function mostrarHTML(productos){
                     <img src="${imagen}" class="imagen-curso u-full-width">
                     <div class="info-card">
                         <h4>${nombre}</h4>
+                        <img src="img/sale.png">
                         <p class="precio">$5700 <span class="u-pull-right ">$3750</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="${id}" id="${id}">Agregar al carrito</a>
                     </div>
