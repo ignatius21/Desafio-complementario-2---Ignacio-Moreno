@@ -47,7 +47,7 @@ function agregarProducto(e){
 function eliminarProducto(e){
     if(e.target.classList.contains('borrar-producto')){
         Swal.fire({
-            title: 'Desea Eliminar el Producto?',
+            title: 'Desea eliminar el producto?',
             icon: 'question',
             color: '#ffffff',
             allowOutsideClick: false,
@@ -202,7 +202,7 @@ function mostrarHTML(productos){
 // TYPEDJS
 
 const typed = new Typed('.typed', {
-    strings: ['Accesorios', 'Ropa','Gadgets'],
+    strings: ['+ estilo','+ diseño'],
     loop: true,
     typeSpeed: 60,
     backSpeed: 80,
@@ -233,6 +233,12 @@ const typed10 = new Typed('.typed10', {
 });
 const typed11 = new Typed('.typed11', {
     strings: ['Drupal'],
+    loop: true,
+    typeSpeed: 90,
+    backSpeed: 100,
+});
+const typed12 = new Typed('.typed12', {
+    strings: ['React Js'],
     loop: true,
     typeSpeed: 90,
     backSpeed: 100,

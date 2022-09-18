@@ -14,13 +14,18 @@ header {
     height: 15rem;
 }
 #logo{
-    height: 50px;
+    height: 70px;
     margin-top: 3rem;
 }
 #logo2{
     height: 50px;
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding-left: 2rem;
+    color: rgb(166, 120, 197);
+    font-size: 2.8rem;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: bold;
+
 }
 
 #hero {
@@ -60,7 +65,7 @@ header {
 
 .submenu {
     position:absolute;
-    display:block;
+    display: block;
 }
 #img-carrito{
     width: 7rem;
@@ -264,28 +269,13 @@ ul {
 
 
 
+
 /* ESTILOS SECCION BUZOS*/
 
 
 .row2 img{
     width: 30rem;
     height: 30rem;
-}
-.contenidoTexto2{
-    width: 100%;
-    margin-top: 29rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenidoTexto2 h1{
-    text-transform: uppercase;
-    font-size: 13.3rem;
-    font-family: Mintage;
-    font-weight: bolder;
-    font-style: oblique;
-    color: #2d0350;
 }
 
 #hero2 {
@@ -413,5 +403,5 @@ opacity:0.3;
 font-size:20px;
 margin-bottom:0;
 }
-  
- 
+
+
