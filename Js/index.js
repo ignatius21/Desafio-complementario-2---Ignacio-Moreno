@@ -65,14 +65,6 @@ window.sr =ScrollReveal();
         delay: 200
 });
 window.sr =ScrollReveal();
-    sr.reveal('.animacion8',{
-        duration: 1500,
-        origin: 'rigth',
-        distance: '400px',
-        reset: true,
-        delay: 200
-});
-window.sr =ScrollReveal();
     sr.reveal('.animacion12',{
         duration: 1500,
         origin: 'right',
