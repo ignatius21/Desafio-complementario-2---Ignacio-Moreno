@@ -238,11 +238,6 @@ const typed11 = new Typed('.typed11', {
     typeSpeed: 90,
     backSpeed: 100,
 });
-const typed12 = new Typed('.typed12', {
-    strings: ['React Js'],
-    loop: true,
-    typeSpeed: 90,
-    backSpeed: 100,
-});
+
 
 
